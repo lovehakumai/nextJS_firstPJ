@@ -43,9 +43,10 @@ export async function getReviewById(id) {
 }
 
 export async function getAllReviews() {
-  return await prisma.reviews.findMany({
-    orderBy: {
-      read: 'desc'
-    }
-  });
+  const reviews = await prisma.reviews.findMany({
+  orderBy: {
+    read: 'desc'
+  }}
+  );
+  return reviews
 }

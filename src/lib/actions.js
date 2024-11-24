@@ -12,7 +12,7 @@ export async function addReview(data){
         author: book.author,
         price: Number(book.price),
         publisher: book.publisher,
-        publisher: book.published,
+        published: book.published,
         image: book.image,
         read: new Date(data.get('read')),
         memo: data.get('memo')
